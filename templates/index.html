@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>CAMERA APP by SRIRAM</title>
+    <style>
+        h2{text-align: center;}
+    </style>
+</head>
+<body>
+    <div >
+        <div >
+            <div style="width:1000px; margin:0 auto;">
+                <h2>CAMERA APP with OCR</h2>
+               <style>
+                 form{text-align: center;}
+               </style>
+               
+                <form method="post" action="{{ url_for('task') }}">
+                <input type="submit" value="Stop/Start" name="stop" />
+                <input type="submit" value="switch_cam" name="no__cam" />
+                <input type="submit" value="capture_photo" name="click_photo" />
+                <input type="submit" value="text_extraction" name="ocr_txt" />
+                
+             
+                
+                
+                </form>
+               
+                <img src="{{ url_for('fun') }}" height="80%">
+              
+                <style>
+                    p{text-align:top left ;}
+                </style>
+                {%if name%}
+                <p><h4>NAME:</h4>{{name}}</p>
+                {% endif %}
+                {%if tet%}
+                <p><h4>PHONE NUMBER:</h4>{{tet}}</p>
+                {% endif %}
+                {%if email%}
+                <p><h4>E-MAIL:</h4>{{email}}</p>
+                {% endif %}
+                {%if web%}
+                <p><h4>WEB-SITES:</h4>{{web}}</p>
+                {% endif %}
+                {%if com%}
+                
+                <p><h4>COMPANY/OFFICE:</h4>{{com}}</p>
+                 {% endif %}
+               
+
+            
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
